@@ -9,6 +9,8 @@
 
 namespace Application;
 
+use Application\Controller\TodosController;
+use Zend\Mvc\Controller\ControllerManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
@@ -24,6 +26,19 @@ class Module
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function getControllerConfig()
+    {
+        return array(
+          'factories' => array(
+              'Application\Controller\Todos' => function(ControllerManager $cm) {
+                      $sm = $cm->getServiceLocator();
+                      $manager = $sm->get('doctrine.documentmanager.odm_default');
+                      return new TodosController($manager);
+               }
+          )
+        );
     }
 
     public function getAutoloaderConfig()

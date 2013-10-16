@@ -1,20 +1,26 @@
 <?php
 namespace Application\Model;
 
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+
+/** @ODM\Document */
 class Todo 
 {
     /**
      * @var string
+     * @ODM\Id
      */
     private $id;
 
     /**
      * @var bool
+     * @ODM\Boolean
      */
     private $complete = false;
 
     /**
      * @var string
+     * @ODM\String
      */
     private $name;
 
