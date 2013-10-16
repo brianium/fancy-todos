@@ -25,3 +25,5 @@ The easiest way to run this app is to fire up mongodb on the default port and us
 mongod
 php -s 0.0.0.0:8080
 ```
+
+There is only one endpoint this piece exposes - /todos. There is a POST endpoint for creating todos, and a GET endpoint for listing them.
