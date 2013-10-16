@@ -11,6 +11,8 @@ This simple showpiece was initialized via composer. It is built off of the [ZF2 
 
 MongoDB was the db of choice, and the [Doctrine ODM Module](https://github.com/doctrine/DoctrineMongoODMModule) for ZF2 was used to do the talking.
 
+There is a single RESTful `TodosController` that highlights creating and listing resources.
+
 Running
 -------
 First install dependencies via composer (from the project root):
