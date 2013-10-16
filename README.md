@@ -10,3 +10,18 @@ Stack
 This simple showpiece was initialized via composer. It is built off of the [ZF2 Skeleton Application](https://github.com/zendframework/ZendSkeletonApplication)
 
 MongoDB was the db of choice, and the [Doctrine ODM Module](https://github.com/doctrine/DoctrineMongoODMModule) for ZF2 was used to do the talking.
+
+Running
+-------
+First install dependencies via composer (from the project root):
+
+```
+composer install
+```
+
+The easiest way to run this app is to fire up mongodb on the default port and use the the PHP 5.4 builtin web server.
+
+```
+mongod
+php -s 0.0.0.0:8080
+```
